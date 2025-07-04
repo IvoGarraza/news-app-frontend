@@ -1,13 +1,14 @@
 import React from 'react'
 import MainSection from '../components/MainSection/MainSection'
 import Slider from '../components/Slider/Slider'
+import Box from "@mui/material/Box";
 
 const Home = () => {
   return (
-    <div className='h-screen pt-24 w-full px-12'>
+    <Box sx={{height:'100vh', paddingTop:'6rem', width:'100%', paddingX:'3rem'}}>
         <MainSection></MainSection>
         <Slider></Slider>
-    </div>
+    </Box>
   )
 }
 

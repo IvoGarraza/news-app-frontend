@@ -1,16 +1,16 @@
 import React from 'react'
 import AddNews from '../Buttons/AddNews/AddNews'
+import { AppBar, Typography } from '@mui/material'
+import Box from '@mui/material/Box'
 
 const Layout = () => {
   return (
-    <nav class="navbar fixed bg-red-500 h-24 z-50 w-full flex flex-row justify-between items-center font-poppins">
-        <div>
-            <span className="title-navbar font-bold text-white text-4xl ml-12 cursor-pointer">MFNews</span>
-        </div>
-        <div>
-            <AddNews></AddNews>
-        </div>
-    </nav>
+    <AppBar sx={{width:'100%', position:'fixed', height:'6rem', backgroundColor:'rojo.main', alignItems:'center', justifyContent:'space-between', display:'flex', flexDirection:'row', paddingX:'2rem'}}>
+      <Typography sx={{fontWeight:'bold',}} variant='h4'>MFNews</Typography>
+      <Box>
+        <AddNews></AddNews>
+      </Box>
+    </AppBar>
   )
 }
 
