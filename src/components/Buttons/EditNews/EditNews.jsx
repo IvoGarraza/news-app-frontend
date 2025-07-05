@@ -1,16 +1,18 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import DeleteIcon from '@mui/icons-material/Delete';
+import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
-const DeleteNews = () => {
+const EditNews = ({onClick}) => {
   return (
     <Button
+    onClick={onClick}
       variant="contained"
       color="error"
-      startIcon={<DeleteIcon />}
+      startIcon={<ModeEditIcon />}
       sx={{
         borderRadius: "999px",
         py: 1.5,
+        mr:2,
         px: 3,
         bgcolor: "white",
         color: "error.main",
@@ -24,9 +26,9 @@ const DeleteNews = () => {
       }}
       
     >
-      Eliminar noticia
+      Editar noticia
     </Button>
   );
 };
 
-export default DeleteNews;
+export default EditNews;

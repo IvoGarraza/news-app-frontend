@@ -1,78 +1,357 @@
-export const data = [
-    {
-      id: 1,
-      author: "Novak Djokovic",
-      title: "Novak Djokovic presenta acciones legales",
-      subtitle: "La Asociación cofundada por Novak Djokovic inició acciones legales contra los organismos rectores del tenis.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur libero vel quam aliquam pellentesque. Proin sollicitudin augue quam, ac imperdiet purus luctus et. Morbi vulputate quam sed finibus ultricies. Ut nec ullamcorper risus, eu iaculis leo. In eget augue tellus. Pellentesque ac lacus vitae metus sodales tristique. Duis fringilla hendrerit dictum. Mauris sit amet tortor quis nibh faucibus bibendum non at mi. Sed eget odio arcu. Nulla efficitur vel augue vitae maximus. Maecenas ante odio, eleifend varius libero quis, mattis pellentesque odio. Sed feugiat et odio id dignissim. Donec vel quam tincidunt, sollicitudin nibh ac, posuere ligula. Donec eu tellus sit amet augue consequat pharetra ut vitae augue. Maecenas suscipit felis dictum massa fermentum pretium. Curabitur imperdiet, lacus a sollicitudin porta, leo nunc blandit orci, vel finibus metus sapien tincidunt nisl. Nunc accumsan urna non luctus iaculis. Sed vitae vehicula lectus. Aenean quis volutpat velit. In nisi nulla, pellentesque a fermentum sed, tristique eu turpis. Etiam tempor augue ullamcorper enim interdum, non sagittis nunc auctor.",
-      url: "https://www.gazzetta.gr/sites/default/files/styles/amp_article_image_748x442/public/2025-01/novak_djokovic_gettyimages-2195055237.jpg.webp?itok=GtTwAUfV",
-      category: "Deportes",
-      date: new Date().toISOString(),
-      likes: 0
-    },
-    {
-      id: 2,
-      author: "Bill Gates",
-      title: "Nueva tecnología revoluciona el mercado",
-      subtitle: "Innovación en el sector tecnológico",
-      description: "Una nueva tecnología está cambiando la forma en que interactuamos con los dispositivos electrónicos. Esta innovación promete mejorar significativamente la experiencia del usuario y abrir nuevas posibilidades en el desarrollo de software.",
-      url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=300&fit=crop",
-      category: "Tecnología",
-      date: new Date().toISOString(),
-      likes: 0
-    },
-    {
-      id: 3,
-      author: "Elon Musk",
-      title: "Avances en la exploración espacial",
-      subtitle: "Nuevos horizontes para la humanidad",
-      description: "Los últimos avances en tecnología espacial están permitiendo que la humanidad explore nuevos horizontes. Estos desarrollos abren la puerta a futuras misiones interplanetarias y la colonización de otros mundos.",
-      url: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=200&h=300&fit=crop",
-      category: "Ciencia",
-      date: new Date().toISOString(),
-      likes: 0
-    },
-    {
-      id: 4,
-      author: "María García",
-      title: "Deportes: Nuevo récord mundial",
-      subtitle: "Histórico logro en atletismo",
-      description: "Un atleta ha logrado establecer un nuevo récord mundial en una competencia internacional. Este logro histórico marca un hito en el deporte y demuestra el potencial humano para superar límites aparentemente imposibles.",
-      url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=300&fit=crop",
-      category: "Deportes",
-      date: new Date().toISOString(),
-      likes: 0
-    },
-    {
-      id: 5,
-      author: "Juan Pérez",
-      title: "Noticia de prueba",
-      description: "Esta es una noticia de prueba",
-      url: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=200&fit=crop",
-      category: "Noticias",
-      date: new Date().toISOString(),
-      likes: 0
-    },
-    {
-      id: 6,
-      url: "https://www.auladelafarmacia.com/wp-content/uploads/2021/11/clima.jpg",
-      author: "Greta Thunberg",
-      title: "Crisis climática: el tiempo se agota",
-      subtitle: "Llamado urgente a la acción global",
-      description: "Nuevos informes científicos alertan sobre el acelerado calentamiento global. Activistas y organismos internacionales instan a los gobiernos a tomar medidas inmediatas para frenar el impacto ambiental y preservar el planeta para las futuras generaciones.",
-      category: "Ciencia",
-      date: "2024-01-10T16:10:00.000Z",
-      likes: 0
+/* export const data = [
+  {
+    id: 1,
+    author: "Novak Djokovic",
+    title: "Novak Djokovic presenta acciones legales",
+    subtitle:
+      "La Asociación cofundada por Novak Djokovic inició acciones legales contra los organismos rectores del tenis.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur libero vel quam aliquam pellentesque. Proin sollicitudin augue quam, ac imperdiet purus luctus et. Morbi vulputate quam sed finibus ultricies. Ut nec ullamcorper risus, eu iaculis leo. In eget augue tellus. Pellentesque ac lacus vitae metus sodales tristique. Duis fringilla hendrerit dictum. Mauris sit amet tortor quis nibh faucibus bibendum non at mi. Sed eget odio arcu. Nulla efficitur vel augue vitae maximus. Maecenas ante odio, eleifend varius libero quis, mattis pellentesque odio. Sed feugiat et odio id dignissim. Donec vel quam tincidunt, sollicitudin nibh ac, posuere ligula. Donec eu tellus sit amet augue consequat pharetra ut vitae augue. Maecenas suscipit felis dictum massa fermentum pretium. Curabitur imperdiet, lacus a sollicitudin porta, leo nunc blandit orci, vel finibus metus sapien tincidunt nisl. Nunc accumsan urna non luctus iaculis. Sed vitae vehicula lectus. Aenean quis volutpat velit. In nisi nulla, pellentesque a fermentum sed, tristique eu turpis. Etiam tempor augue ullamcorper enim interdum, non sagittis nunc auctor.",
+    url: "https://www.gazzetta.gr/sites/default/files/styles/amp_article_image_748x442/public/2025-01/novak_djokovic_gettyimages-2195055237.jpg.webp?itok=GtTwAUfV",
+    category: "Deportes",
+    date: new Date().toISOString(),
+    likes: 0,
   },
   {
-    "id": 5,
-    "url": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=200&h=300&fit=crop",
-    "author": "Ada Lovelace",
-    "title": "Educación digital: un paso hacia el futuro",
-    "subtitle": "La tecnología al servicio del aprendizaje",
-    "description": "La integración de plataformas digitales en las aulas está transformando la educación tradicional. Expertos aseguran que el aprendizaje personalizado y el acceso remoto son claves para una enseñanza más inclusiva y efectiva en el siglo XXI.",
-    "category": "Tecnología",
-    "date": "2024-01-11T11:45:00.000Z",
-    "likes": 0
-}
-  ]
+    id: 2,
+    author: "Bill Gates",
+    title: "Nueva tecnología revoluciona el mercado",
+    subtitle: "Innovación en el sector tecnológico",
+    description:
+      "Una nueva tecnología está cambiando la forma en que interactuamos con los dispositivos electrónicos. Esta innovación promete mejorar significativamente la experiencia del usuario y abrir nuevas posibilidades en el desarrollo de software.",
+    url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=300&fit=crop",
+    category: "Tecnología",
+    date: new Date().toISOString(),
+    likes: 0,
+  },
+  {
+    id: 3,
+    author: "Elon Musk",
+    title: "Avances en la exploración espacial",
+    subtitle: "Nuevos horizontes para la humanidad",
+    description:
+      "Los últimos avances en tecnología espacial están permitiendo que la humanidad explore nuevos horizontes. Estos desarrollos abren la puerta a futuras misiones interplanetarias y la colonización de otros mundos.",
+    url: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=200&h=300&fit=crop",
+    category: "Ciencia",
+    date: new Date().toISOString(),
+    likes: 0,
+  },
+  {
+    id: 4,
+    author: "María García",
+    title: "Deportes: Nuevo récord mundial",
+    subtitle: "Histórico logro en atletismo",
+    description:
+      "Un atleta ha logrado establecer un nuevo récord mundial en una competencia internacional. Este logro histórico marca un hito en el deporte y demuestra el potencial humano para superar límites aparentemente imposibles.",
+    url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=300&fit=crop",
+    category: "Deportes",
+    date: new Date().toISOString(),
+    likes: 0,
+  },
+  {
+    id: 5,
+    author: "Juan Pérez",
+    title: "Noticia de prueba",
+    description: "Esta es una noticia de prueba",
+    url: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=200&fit=crop",
+    category: "Noticias",
+    date: new Date().toISOString(),
+    likes: 0,
+  },
+  {
+    id: 6,
+    url: "https://www.auladelafarmacia.com/wp-content/uploads/2021/11/clima.jpg",
+    author: "Greta Thunberg",
+    title: "Crisis climática: el tiempo se agota",
+    subtitle: "Llamado urgente a la acción global",
+    description:
+      "Nuevos informes científicos alertan sobre el acelerado calentamiento global. Activistas y organismos internacionales instan a los gobiernos a tomar medidas inmediatas para frenar el impacto ambiental y preservar el planeta para las futuras generaciones.",
+    category: "Ciencia",
+    date: "2024-01-10T16:10:00.000Z",
+    likes: 0,
+  },
+  {
+    id: 5,
+    url: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=200&h=300&fit=crop",
+    author: "Ada Lovelace",
+    title: "Educación digital: un paso hacia el futuro",
+    subtitle: "La tecnología al servicio del aprendizaje",
+    description:
+      "La integración de plataformas digitales en las aulas está transformando la educación tradicional. Expertos aseguran que el aprendizaje personalizado y el acceso remoto son claves para una enseñanza más inclusiva y efectiva en el siglo XXI.",
+    category: "Tecnología",
+    date: "2024-01-11T11:45:00.000Z",
+    likes: 0,
+  },
+  {
+    id: 6,
+    author: "Lionel Messi",
+    title: "Messi inaugura centro deportivo en Rosario",
+    subtitle: "Un espacio para formar a jóvenes talentos",
+    description:
+      "Lionel Messi ha inaugurado un nuevo centro deportivo en su ciudad natal, Rosario. El complejo cuenta con canchas de última generación, programas de entrenamiento y becas para jóvenes de bajos recursos, apostando al desarrollo del deporte desde la base.",
+    url: "https://images.unsplash.com/photo-1588776814546-ec7c12b2c7cd?w=200&h=300&fit=crop",
+    category: "Deportes",
+    date: new Date().toISOString(),
+    likes: 0,
+  },
+  {
+    id: 7,
+    author: "Jane Goodall",
+    title: "Esfuerzos globales para preservar la biodiversidad",
+    subtitle: "Iniciativas para proteger ecosistemas clave",
+    description:
+      "Organizaciones internacionales, junto a líderes ambientales como Jane Goodall, impulsan nuevas estrategias para preservar especies en peligro y restaurar hábitats naturales. La colaboración global es clave para enfrentar la pérdida de biodiversidad.",
+    url: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=200&h=300&fit=crop",
+    category: "Ciencia",
+    date: new Date().toISOString(),
+    likes: 0,
+  },
+  {
+    id: 8,
+    author: "Sheryl Sandberg",
+    title: "Liderazgo femenino en la era digital",
+    subtitle: "Mujeres transformando el sector tecnológico",
+    description:
+      "Cada vez más mujeres están asumiendo roles clave en empresas tecnológicas, marcando un cambio en la cultura empresarial. La inclusión, el liderazgo empático y la innovación son pilares de esta transformación liderada por figuras como Sheryl Sandberg.",
+    url: "https://images.unsplash.com/photo-1603201667230-bb47bbdcf663?w=200&h=300&fit=crop",
+    category: "Tecnología",
+    date: new Date().toISOString(),
+    likes: 0,
+  },
+];
+ */
+
+export const data=[
+  {
+    id: 1,
+    author: "Novak Djokovic",
+    title: "Novak Djokovic presenta acciones legales",
+    subtitle: "La Asociación cofundada por Novak Djokovic inició acciones legales contra los organismos rectores del tenis.",
+    description: "Lorem ipsum dolor sit amet...",
+    url: "https://a.espncdn.com/photo/2025/0121/r1441478_1296x729_16-9.jpg",
+    category: "Deportes",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 2,
+    author: "Bill Gates",
+    title: "Nueva tecnología revoluciona el mercado",
+    subtitle: "Innovación en el sector tecnológico",
+    description: "Una nueva tecnología está cambiando...",
+    url: "https://cognitiva.la/wp-content/uploads/2016/09/Inteligencia-artificial-revoluciona-mercado-trabajo.jpg",
+    category: "Tecnología",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 3,
+    author: "Elon Musk",
+    title: "Avances en la exploración espacial",
+    subtitle: "Nuevos horizontes para la humanidad",
+    description: "Los últimos avances en tecnología espacial...",
+    url: "https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Ciencia",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 4,
+    author: "María García",
+    title: "Deportes: Nuevo récord mundial",
+    subtitle: "Histórico logro en atletismo",
+    description: "Un atleta ha logrado establecer...",
+    url: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Deportes",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 5,
+    author: "Periodista Deportivo",
+    title: "El impacto de la tecnología en el deporte moderno",
+    subtitle: "Innovaciones que cambian el juego",
+    description: "Desde el VAR hasta los análisis...",
+    url: "https://futuroelectrico.com/wp-content/uploads/2022/10/tecnologia-y-deporte.jpg",
+    category: "Deportes",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 6,
+    url: "https://atuk.com.ec/wp-content/uploads/2021/08/mitigacion-del-cambio-climatico-ATUK-1170x725.jpg",
+    author: "Greta Thunberg",
+    title: "Crisis climática: el tiempo se agota",
+    subtitle: "Llamado urgente a la acción global",
+    description: "Nuevos informes científicos alertan...",
+    category: "Ciencia",
+    date: "2024-01-10T16:10:00.000Z",
+    likes: 0
+  },
+  {
+    id: 7,
+    url: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    author: "Ada Lovelace",
+    title: "Educación digital: un paso hacia el futuro",
+    subtitle: "La tecnología al servicio del aprendizaje",
+    description: "La integración de plataformas digitales...",
+    category: "Tecnología",
+    date: "2024-01-11T11:45:00.000Z",
+    likes: 0
+  },
+  {
+    id: 8,
+    author: "Lionel Messi",
+    title: "Messi inaugura centro deportivo en Rosario",
+    subtitle: "Un espacio para formar a jóvenes talentos",
+    description: "Lionel Messi ha inaugurado...",
+    url: "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Deportes",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 9,
+    author: "Jane Goodall",
+    title: "Esfuerzos globales para preservar la biodiversidad",
+    subtitle: "Iniciativas para proteger ecosistemas clave",
+    description: "Organizaciones internacionales...",
+    url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Ciencia",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 10,
+    author: "Sheryl Sandberg",
+    title: "Liderazgo femenino en la era digital",
+    subtitle: "Mujeres transformando el sector tecnológico",
+    description: "Cada vez más mujeres están asumiendo...",
+    url: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Tecnología",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 11,
+    author: "Dr. Sofia Morales",
+    title: "Innovaciones en tratamientos contra el cáncer",
+    subtitle: "Nuevas terapias ofrecen esperanza a pacientes",
+    description: "Investigadores médicos han logrado...",
+    url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Salud",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 12,
+    author: "Agencia Espacial Europea",
+    title: "Misión a Marte: Preparativos finales para el lanzamiento",
+    subtitle: "Un paso gigante hacia la exploración interplanetaria",
+    description: "La Agencia Espacial Europea anuncia...",
+    url: "https://images.unsplash.com/photo-1457364887197-9150188c107b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Ciencia",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 13,
+    author: "Organización Mundial de la Salud",
+    title: "Desafíos de la salud global post-pandemia",
+    subtitle: "Lecciones aprendidas y el futuro de la salud pública",
+    description: "La OMS presenta un informe detallado...",
+    url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Salud",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 14,
+    author: "Director de Cine Indie",
+    title: "El resurgimiento del cine independiente: nuevas plataformas",
+    subtitle: "Creatividad sin límites en la pantalla grande y chica",
+    description: "El cine independiente vive un auge...",
+    url: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Entretenimiento",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 15,
+    author: "Analista Político",
+    title: "Elecciones presidenciales: el panorama político actual",
+    subtitle: "Análisis de las propuestas de los candidatos",
+    description: "Con las próximas elecciones...",
+    url: "https://images.unsplash.com/photo-1580136579312-94651dfd596d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Política",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 16,
+    author: "Experto en Ciberseguridad",
+    title: "Ciberataques: la creciente amenaza a la seguridad de datos",
+    subtitle: "Estrategias para proteger la información personal y empresarial",
+    description: "El número de ciberataques sigue...",
+    url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Tecnología",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 17,
+    author: "Atleta Olímpico",
+    title: "Preparación olímpica: el camino hacia la gloria",
+    subtitle: "Entrenamientos de élite y sacrificios por la medalla",
+    description: "Atletas de todo el mundo intensifican...",
+    url: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Deportes",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 18,
+    author: "Chef Famoso",
+    title: "Tendencias culinarias: la gastronomía del futuro",
+    subtitle: "Ingredientes sostenibles y nuevas experiencias en la mesa",
+    description: "Chefs de renombre exploran...",
+    url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Entretenimiento",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 19,
+    author: "Historiador",
+    title: "Análisis de las relaciones internacionales actuales",
+    subtitle: "La diplomacia en un mundo multipolar",
+    description: "Expertos en relaciones internacionales...",
+    url: "https://www.ucsf.edu.ar/wp-content/uploads/2022/05/relaciones-internacionales.jpg",
+    category: "Política",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 20,
+    author: "Nutricionista",
+    title: "Salud mental: la importancia del bienestar emocional",
+    subtitle: "Estrategias para cuidar la mente en la vida moderna",
+    description: "La salud mental se posiciona...",
+    url: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80",
+    category: "Salud",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+  {
+    id: 21,
+    author: "Investigador de IA",
+    title: "El futuro de la inteligencia artificial: ética y desarrollo",
+    subtitle: "Equilibrio entre innovación y responsabilidad",
+    description: "El rápido avance de la inteligencia artificial...",
+    url: "https://cdn.agenciasinc.es/var/ezwebin_site/storage/images/reportajes/por-que-deberia-preocuparte-la-etica-de-la-inteligencia-artificial/7576522-1-esl-MX/Por-que-deberia-preocuparte-la-etica-de-la-inteligencia-artificial.jpg",
+    category: "Tecnología",
+    date: "2025-07-05T01:19:25.000Z",
+    likes: 0
+  },
+
+]

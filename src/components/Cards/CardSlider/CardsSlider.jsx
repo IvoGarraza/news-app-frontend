@@ -15,9 +15,9 @@ const CardsSlider = (props) => {
         component="img"
         image={props.noticia.url}
         alt="slider-img"
-        sx={{ borderRadius: 3, height:200 }}
+        sx={{ borderRadius: 3, height:'50%' }}
       />
-      <CardContent>
+      <CardContent sx={{height:'50%',display:'flex', flexDirection:'column', justifyContent:'space-between', alignItems:'start'}}>
         <Chip label={props.noticia.category} variant="outlined" color={ColorBackgroundSelector(props.noticia.category)} gutterBottom>
         </Chip>
         <Typography variant="h6" component="div" fontWeight="bold">

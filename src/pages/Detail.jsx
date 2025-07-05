@@ -1,15 +1,17 @@
 import { Typography } from '@mui/material'
 import  Box  from '@mui/material/Box'
 import  Chip  from '@mui/material/Chip'
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { ColorBackgroundSelector } from '../utils'
+import EditModal from '../components/Modal/EditModal'
 
 const Detail = () => {
   const {id} = useParams()
   const news = useSelector(state => state.newsState.news)
   const noticia = news.find(n => String(n.id) === String(id));
+  const [open, setOpen] = useState(false);
 
   return (
     <Box sx={{paddingTop:'8rem', paddingX:'2rem'}}>
@@ -26,6 +28,7 @@ const Detail = () => {
             borderRadius: 12,
           }}></img>
       </Box>
+
     </Box>
   )
 }

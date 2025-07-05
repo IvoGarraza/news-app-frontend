@@ -32,5 +32,11 @@ export const theme = createTheme({
       dark: "#014d0c",
       contrastText: "#ffffff",
     },
+    rosa: {
+      main: "#be02a2",
+      light: "#b85aaa",
+      dark: "#720362",
+      contrastText: "#ffffff",
+    },
   },
 });

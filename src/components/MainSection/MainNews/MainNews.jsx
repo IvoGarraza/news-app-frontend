@@ -45,7 +45,7 @@ const MainNews = () => {
       </Box>
       <Box sx={{ width: "100%", height: "66%" }}>
         <img
-          src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=200&fit=crop"
+          src={MainNews.url}
           style={{
             width: "100%",
             height: "100%",

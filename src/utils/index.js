@@ -6,8 +6,14 @@ export const ColorBackgroundSelector = (category) => {
         return "azul";
       case 'Deportes':
         return "verde"
-        case 'Ciencia':
-          return 'celeste';
+      case 'Ciencia':
+        return 'celeste';
+      case 'Política':
+        return 'rojo';
+      case 'Salud':
+        return 'amarillo';
+      case 'Entretenimiento':
+        return 'rosa';
       default:
         break;
     }

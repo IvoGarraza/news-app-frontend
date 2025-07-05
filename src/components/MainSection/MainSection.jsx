@@ -2,7 +2,6 @@ import React from "react";
 import MainNews from "./MainNews/MainNews";
 import SideNews from "./SideNews/SideNews";
 import Box from "@mui/material/Box";
-import { useSelector } from "react-redux";
 
 const MainSection = () => {
 
